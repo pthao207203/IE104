@@ -73,6 +73,37 @@ export default function Header({ setHeaderHeight, handleTaskBarToggle }) {
           {/* <h1 className="gap-2.5 self-stretch my-auto max-md:text-4xl">Distenda</h1> */}
         </div>
 
+<<<<<<< HEAD
+    {/* Navigation và Button */}
+    <div className="flex flex-1 items-center justify-between gap-6">
+      {/* Navigation */}
+      <nav
+        className="flex flex-1 items-center text-2xl font-semibold text-center overflow-x-auto scrollbar-hide justify-between"
+        style={{ whiteSpace: "nowrap" }}
+      >
+        <Link
+          to="/courses"
+          className={`flex-1 px-3 py-3 ${
+            activeLink === "/courses" ? "bg-[#CFF500] text-black" : ""
+          }`}
+          onClick={() => handleLinkClick("/courses")}
+        >
+          Trang chủ
+        </Link>
+        {data.category.map((cate) => (
+          <Link
+            key={cate.CategorySlug}
+            to={`/category/${cate.CategorySlug}`}
+            className={`flex-1 px-3 py-3 ${
+              activeLink === `/category/${cate.CategorySlug}` ? "bg-[#CFF500] text-black" : ""
+            }`}
+            onClick={() => handleLinkClick(`/category/${cate.CategorySlug}`)}
+          >
+            {cate.CategoryName}
+          </Link>
+        ))}
+      </nav>
+=======
         {/* Navigation và Button */}
         <div className="flex flex-1 items-center justify-between gap-6">
           {/* Navigation */}
@@ -97,6 +128,7 @@ export default function Header({ setHeaderHeight, handleTaskBarToggle }) {
               </Link>
             ))}
           </nav>
+>>>>>>> 66e954addfb7428578eb57e445e6361d681506b8
 
           {/* Button */}
           <button
